@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Léo Bruneau</title>
+<meta name="description" content="Léo Bruneau, M.Sc. Data Science student at EPFL. Reinforcement learning, computational neuroscience and vision.">
+<style>
+  :root {
+    --bg: #fafaf8; --fg: #1d1d1b; --muted: #6b6b66; --line: #e2e2dc; --card: #f0f0eb; --accent: #c8102e;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #141413; --fg: #ececea; --muted: #9a9a94; --line: #2c2c2a; --card: #1e1e1c; --accent: #ff5a6e; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 16px/1.6 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 4rem 1.5rem 3rem; }
+  a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+  a:hover { color: var(--accent); }
+  header { display: flex; gap: 1.75rem; align-items: center; margin-bottom: 3rem; }
+  header img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; flex: none; }
+  h1 { font-size: 2.4rem; line-height: 1.1; margin: 0 0 .4rem; letter-spacing: -.02em; }
+  .tagline { margin: 0 0 .8rem; color: var(--muted); }
+  .links { display: flex; flex-wrap: wrap; gap: .4rem 1.1rem; margin: 0; padding: 0; list-style: none; font-size: .95rem; }
+  h2 {
+    font-size: .8rem; text-transform: uppercase; letter-spacing: .12em; color: var(--accent);
+    margin: 3rem 0 1rem; padding-bottom: .4rem; border-bottom: 1px solid var(--line);
+  }
+  h3 { font-size: 1rem; margin: 0; }
+  .item { margin-bottom: 1.6rem; }
+  .meta { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+  .when, .where { color: var(--muted); font-size: .92rem; }
+  ul { padding-left: 1.2rem; margin: .4rem 0 0; }
+  li { margin-bottom: .3rem; }
+  .interests { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: .8rem; }
+  .interests div { background: var(--card); padding: 1rem 1.1rem; }
+  .interests p { margin: .3rem 0 0; font-size: .93rem; color: var(--muted); }
+  .pubs li { margin-bottom: .8rem; }
+  .pubs .venue { color: var(--muted); }
+  dl { display: grid; grid-template-columns: max-content 1fr; gap: .35rem 1.2rem; margin: 0; }
+  dt { font-weight: bold; }
+  dd { margin: 0; }
+  footer { margin-top: 4rem; color: var(--muted); font-size: .85rem; }
+  @media (max-width: 560px) {
+    header { flex-direction: column; align-items: flex-start; }
+    dl { grid-template-columns: 1fr; }
+    dd { margin-bottom: .5rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <img src="me.jpg" alt="Portrait of Léo Bruneau">
+  <div>
+    <h1>Léo Bruneau</h1>
+    <p class="tagline">M.Sc. Data Science student at EPFL, researching robust reinforcement learning agents. Lausanne, Switzerland.</p>
+    <ul class="links">
+      <li><a href="mailto:leo.bruneau@epfl.ch">leo.bruneau@epfl.ch</a></li>
+      <li><a href="https://github.com/leobruneau">GitHub</a></li>
+      <li><a href="https://scholar.google.com/citations?user=okOh-yUAAAAJ&amp;hl=en">Google Scholar</a></li>
+      <li><a href="https://orcid.org/0009-0001-4141-1987">ORCID</a></li>
+    </ul>
+  </div>
+</header>
+
+<section>
+  <h2>About</h2>
+  <p>I am a Data Science master's student at EPFL, specializing in neuroscience. Since 2024 I have worked at the <a href="https://mlabofai.org/">Mathis Lab of Adaptive Intelligence</a>, where I train vision-based RL agents to match mouse behavior and generalize to layouts they have never seen. Before that I ran behavioral experiments with mice and with people, and I studied bioengineering at EPFL.</p>
+</section>
+
+<section>
+  <h2>Interests</h2>
+  <div class="interests">
+    <div><h3>Reinforcement learning</h3><p>World models and training strategies for agents that generalize beyond their training environments.</p></div>
+    <div><h3>Computational neuroscience</h3><p>Comparing artificial agents with animal behavior, and active sensing in mice.</p></div>
+    <div><h3>Vision and perception</h3><p>Temporal dynamics of human visual processing, studied with psychophysics and EEG.</p></div>
+    <div><h3>Language models</h3><p>Fine-tuning, retrieval and tool-calling agents built on open models.</p></div>
+    <div><h3>Music cognition</h3><p>Tonal organization and harmonic tension, modeled from annotated scores.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Experience</h2>
+
+  <div class="item">
+    <div class="meta"><h3>Research Assistant, <a href="https://mlabofai.org/">Mathis Lab of Adaptive Intelligence</a></h3><span class="when">Feb 2024 to present</span></div>
+    <div class="where">Campus Biotech, Geneva. Part-time until June 2026, full-time since.</div>
+    <ul>
+      <li>I adapt world-model methods from recent literature to train vision-based agents that match mouse behavior from our published data and generalize to unseen layouts. Target venue is ICML 2027.</li>
+      <li>I modularized the training code for RL agents in Unity environments, containerized it with Docker and maintain its tests and documentation.</li>
+      <li>I trained 10 mice on a new augmented-reality setup to study adaptive motor control. The work appeared in <i>Current Biology</i>, where I am second author.</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <div class="meta"><h3>Research Assistant, <a href="https://www.epfl.ch/labs/lpsy/">Laboratory of Psychophysics</a></h3><span class="when">Sep 2025 to Jun 2026</span></div>
+    <div class="where">EPFL, Lausanne</div>
+    <ul>
+      <li>I designed experimental paradigms and visual stimuli to study the temporal dynamics of visual processing.</li>
+      <li>I ran behavioral and EEG experiments with more than 70 participants. Two second-author papers came out of this work.</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <div class="meta"><h3>Teaching Assistant, EPFL</h3><span class="when">Sep 2023 to Jan 2026</span></div>
+    <div class="where">EPFL, Lausanne</div>
+    <ul>
+      <li>I led weekly sessions for more than 100 students in <a href="https://edu.epfl.ch/coursebook/fr/information-calcul-communication-CS-119-G">Computer Science Fundamentals</a>, <a href="https://edu.epfl.ch/coursebook/en/object-oriented-programming-CS-112-I">Object-Oriented Programming</a> (C++) and <a href="https://edu.epfl.ch/coursebook/en/general-physics-electromagnetism-PHYS-201-A">Electromagnetism</a>.</li>
+      <li>I graded exams and reviewed more than 10 final programming projects each year.</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <div class="meta"><h3>Research Assistant, <a href="https://www.epfl.ch/labs/dcml/">Digital and Cognitive Musicology Lab</a></h3><span class="when">Aug 2023 to Sep 2023</span></div>
+    <div class="where">EPFL, Lausanne</div>
+    <ul>
+      <li>I trained a self-organizing map on 18 Mozart piano sonatas to map chord affinities and tonal organization.</li>
+      <li>I built score-parsing and media-generation pipelines for the open-source <a href="https://github.com/johentsch/ms3"><code>ms3</code></a> package.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Publications</h2>
+  <ol class="pubs">
+    <li>C. Benquet, T. Sainsbury, <b>L. Bruneau</b>, … M. W. Mathis. <a href="https://doi.org/10.1016/j.cub.2026.06.011">Visual uncertainty and task demands shape active sensing strategies in mice.</a> <span class="venue"><i>Current Biology</i> 36(14), 2026.</span></li>
+    <li>M. Morea, <b>L. Bruneau</b>, M. H. Herzog. Grouping comes before seeing. Temporal dynamics of visual processing. <span class="venue"><i>Journal of Vision</i>, submitted.</span></li>
+    <li>M. Morea, <b>L. Bruneau</b>, M. H. Herzog, D. Pascucci. Object representations persist to shape future perception. <span class="venue">In preparation.</span></li>
+  </ol>
+</section>
+
+<section>
+  <h2>Awards</h2>
+  <div class="item">
+    <div class="meta"><h3>1st place, chocolate recognition challenge</h3><span class="when">May 2025</span></div>
+    <div class="where">EPFL EE-451 Kaggle competition</div>
+    <p>First of 28 teams in a competition that banned deep learning. Our pipeline found, segmented, classified and counted chocolates in natural scenes using template-matching heat maps, blob detection and an SVM. It reached 74% accuracy on the private test set, 18 points above second place.</p>
+  </div>
+  <div class="item">
+    <div class="meta"><h3>Honorable mention, Vitol challenge at LauzHack</h3><span class="when">Dec 2024</span></div>
+    <div class="where">Lausanne</div>
+    <p>We built a web dashboard where non-technical users ask a locally hosted Llama model to analyze satellite images. The model calls plotting and analysis functions and a YOLO detector, then returns the results in the chat. We presented it to Vitol's core development team.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Education</h2>
+  <div class="item">
+    <div class="meta"><h3>M.Sc. Data Science, EPFL</h3><span class="when">2024 to Oct 2027 (expected)</span></div>
+    <div class="where">Specialization in neuroscience. GPA 5.43/6.</div>
+  </div>
+  <div class="item">
+    <div class="meta"><h3>B.Sc. Bioengineering, EPFL</h3><span class="when">2021 to 2024</span></div>
+    <div class="where">GPA 5.06/6.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <dl>
+    <dt>Programming</dt><dd>Python, C++, C#, JavaScript, MATLAB</dd>
+    <dt>Machine learning</dt><dd>PyTorch, CleanRL, Gymnasium, Hugging Face (Transformers, PEFT, TRL), FAISS, scikit-learn, pandas</dd>
+    <dt>Tools</dt><dd>Docker, Apptainer, Git, SLURM, Kubernetes, Weights &amp; Biases, Unity</dd>
+    <dt>Languages</dt><dd>French and Italian (native), English (C1)</dd>
+  </dl>
+</section>
+
+<footer>© 2026 Léo Bruneau</footer>
+
+</main>
+</body>
+</html>
